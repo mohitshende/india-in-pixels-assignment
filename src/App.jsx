@@ -6,7 +6,7 @@ function App() {
   const [state, setState] = useState([]);
 
   useEffect(() => {
-    setState(localStorage?.getItem("states")?.split(","));
+    setState(localStorage?.getItem("states")?.split(",") || []);
   }, []);
 
   return (
